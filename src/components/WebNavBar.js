@@ -9,8 +9,9 @@ import styled, {keyframes,css} from 'styled-components'
 import { useState } from 'react'
 
 const Container = styled.div`
-    position:sticky;
+    position: fixed;
     top: 0;
+    width:100%;
     display:flex;
     flex-direction:row;
     background-color:#003087;
@@ -39,6 +40,7 @@ const Icons = styled.div`
     display:flex;
     flex-direction:row;
     align-items:center;
+    padding-right:5vw;
     @media only screen and (max-width: 600px){
         display:none;
     }
@@ -72,6 +74,7 @@ const IconType = styled.span`
 `
 const Menu = styled.img`
     width:6vh;
+
     @media only screen and (min-width: 768px){
         display:none;
     }
@@ -83,13 +86,13 @@ const MenuDiv = styled.div`
     display:flex;
     align-items: center;
     width:10%;
+    padding-right:2vw;
     @media only screen and (min-width: 768px){
         display:none;
     }
 `
 const swipeIn=keyframes`
     0%{
-        position:fixed;
         transform: translateX(50px); opacity:0.8;
     }
     100% {
@@ -103,8 +106,8 @@ const Overlay = styled.div`
     flex-direction:column;
     position: fixed; /* Sit on top of the page content */ /* Hidden by default */
     width:18%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 14.8vh;
+    height:100%; /* Full height (cover the whole page) */
+    top:14.8vh;
     left:82%;
     background-color: #003087; /* Black background with opacity */
     opacity:0.95;

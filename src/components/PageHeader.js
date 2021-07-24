@@ -17,8 +17,9 @@ const Header= styled.div`
     background-color:#66a3dc;
     align-items: center;
     width: 100%;
-    padding-bottom:5vh;
-    border-bottom: solid #FFB81C 10px;
+    padding-bottom:6vh;
+    padding-top:18vh;
+    border-bottom: solid #FFB81C 5vh;
 `
 const Reinvent= styled.h1`
     font-family: 'PT Sans';
@@ -59,7 +60,7 @@ const PageHeader = () => {
                 <Gif src={findItem}/>
                 <ReinventNBtn>
                     <Reinvent>Reinvent the way you furnish</Reinvent> 
-                    <a href="/#expore"><Btn>View Demo</Btn></a>
+                    <a href="/#demo"><Btn>View Demo</Btn></a>
                 </ReinventNBtn>          
             </Header>
         </div>
