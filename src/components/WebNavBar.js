@@ -5,7 +5,7 @@ import innovate from '../images/innovate.png'
 import future from '../images/future.png'
 import menu from '../images/menu.png'
 import x from '../images/x.png'
-import styled, {keyframes,css} from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import { useState } from 'react'
 
 const Container = styled.div`
@@ -145,18 +145,18 @@ const WebNavBar = () => {
                     <a href="/"><Logo src={walmartRooms} alt="Walmart Rooms Logo" /></a>
                 </LogoDiv>
                 <Icons>
-                    <a href="/#innovate"><IconPar><Icon src={innovate} alt="Innovate Icon" /><IconType>Innovate</IconType></IconPar></a>
-                    <a href="/#explore"><IconPar><Icon src={explore} alt="Explore Icon" /><IconType>Explore</IconType></IconPar></a>
-                    <a href="/#future"><IconPar><Icon src={future} alt="Future Icon" /><IconType>Future</IconType></IconPar></a>
-                    <a href="/#about"><IconPar><Icon src={about} alt="About Icon" /><IconType>About</IconType></IconPar></a>
+                    <a style={{textDecoration:'none'}} href="/#innovate"><IconPar><Icon src={innovate} alt="Innovate Icon" /><IconType>Innovate</IconType></IconPar></a>
+                    <a style={{textDecoration:'none'}} href="/#explore"><IconPar><Icon src={explore} alt="Explore Icon" /><IconType>Explore</IconType></IconPar></a>
+                    <a style={{textDecoration:'none'}} href="/#future"><IconPar><Icon src={future} alt="Future Icon" /><IconType>Future</IconType></IconPar></a>
+                    <a style={{textDecoration:'none'}} href="/#about"><IconPar><Icon src={about} alt="About Icon" /><IconType>About</IconType></IconPar></a>
                 </Icons>
                 <MenuDiv><Menu src={activeIcon} alt="Menu Icon" onClick={toggleIcon} /></MenuDiv>
             </Container>
             <Overlay active={active}>
-                <a href="/#innovate"><IconParMob onClick={toggleIcon}><Icon src={innovate} alt="Innovate Icon" /><IconType>Innovate</IconType></IconParMob></a>
-                <a href="/#explore"><IconParMob onClick={toggleIcon}><Icon src={explore} alt="Explore Icon" /><IconType>Explore</IconType></IconParMob></a>
-                <a href="/#future"><IconParMob onClick={toggleIcon}><Icon src={future} alt="Future Icon" /><IconType>Future</IconType></IconParMob></a>
-                <a href="/#about"><IconParMob onClick={toggleIcon}><Icon src={about} alt="About Icon" /><IconType>About</IconType></IconParMob></a>
+                <a style={{textDecoration:'none'}} href="/#innovate"><IconParMob onClick={toggleIcon}><Icon src={innovate} alt="Innovate Icon" /><IconType>Innovate</IconType></IconParMob></a>
+                <a style={{textDecoration:'none'}} href="/#explore"><IconParMob onClick={toggleIcon}><Icon src={explore} alt="Explore Icon" /><IconType>Explore</IconType></IconParMob></a>
+                <a style={{textDecoration:'none'}} href="/#future"><IconParMob onClick={toggleIcon}><Icon src={future} alt="Future Icon" /><IconType>Future</IconType></IconParMob></a>
+                <a style={{textDecoration:'none'}} href="/#about"><IconParMob onClick={toggleIcon}><Icon src={about} alt="About Icon" /><IconType>About</IconType></IconParMob></a>
             </Overlay>
         </div>
     )

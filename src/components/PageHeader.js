@@ -60,7 +60,7 @@ const PageHeader = () => {
                 <Gif src={findItem}/>
                 <ReinventNBtn>
                     <Reinvent>Reinvent the way you furnish</Reinvent> 
-                    <a href="/#demo"><Btn>View Demo</Btn></a>
+                    <a style={{textDecoration:'none'}} href="/#demo"><Btn>View Demo</Btn></a>
                 </ReinventNBtn>          
             </Header>
         </div>
