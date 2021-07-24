@@ -90,10 +90,10 @@ const MenuDiv = styled.div`
 const swipeIn=keyframes`
     0%{
         position:fixed;
-        transform: translateX(50px); opacity:1;
+        transform: translateX(50px); opacity:0.8;
     }
     100% {
-        transform: translateX(0); opacity:0.8;
+        transform: translateX(0); opacity:0.95;
     }
 `
 
@@ -107,7 +107,7 @@ const Overlay = styled.div`
     top: 14.8vh;
     left:82%;
     background-color: #003087; /* Black background with opacity */
-    opacity:0.8;
+    opacity:0.95;
     z-index: 2;
     animation-name:${swipeIn};
     animation-duration: 1s; 
