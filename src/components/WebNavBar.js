@@ -5,7 +5,7 @@ import innovate from '../images/innovate.png'
 import future from '../images/future.png'
 import menu from '../images/menu.png'
 import x from '../images/x.png'
-import styled from 'styled-components'
+import styled, {keyframes,css} from 'styled-components'
 import { useState } from 'react'
 
 const Container = styled.div`
@@ -71,7 +71,6 @@ const IconType = styled.span`
 
 `
 const Menu = styled.img`
- 
     width:6vh;
     @media only screen and (min-width: 768px){
         display:none;
@@ -88,9 +87,19 @@ const MenuDiv = styled.div`
         display:none;
     }
 `
+const swipeIn=keyframes`
+    0%{
+        position:fixed;
+        transform: translateX(50px); opacity:1;
+    }
+    100% {
+        transform: translateX(0); opacity:0.8;
+    }
+`
+
 
 const Overlay = styled.div`
-    display:flex;
+    display:${props=>props.active===false ? 'none':'flex'};
     flex-direction:column;
     position: fixed; /* Sit on top of the page content */ /* Hidden by default */
     width:18%; /* Full width (cover the whole page) */
@@ -100,6 +109,8 @@ const Overlay = styled.div`
     background-color: #003087; /* Black background with opacity */
     opacity:0.8;
     z-index: 2;
+    animation-name:${swipeIn};
+    animation-duration: 1s; 
     @media only screen and (min-width: 768px){
         display:none;
     }
@@ -116,12 +127,13 @@ const IconParMob = styled.div`
 
 `
 
-const WebNavBar = () => {
-    const [active, setActive] = useState(true);
-    const toggle = () => {
-        active === true ? console.log("x") : console.log("menu");
-        active === true ? setActive(false) : setActive(true);
 
+const WebNavBar = () => {
+    const [active, setActive] = useState(false);
+    const [activeIcon, setActiveIcon] = useState(menu);
+    const toggleIcon = () => {
+        activeIcon === menu ? setActiveIcon(x) : setActiveIcon(menu);
+        active === true ? setActive(false) : setActive(true);
     }
     return (
         <div>
@@ -135,15 +147,14 @@ const WebNavBar = () => {
                     <a href="/#future"><IconPar><Icon src={future} alt="Future Icon" /><IconType>Future</IconType></IconPar></a>
                     <a href="/#about"><IconPar><Icon src={about} alt="About Icon" /><IconType>About</IconType></IconPar></a>
                 </Icons>
-                {active && <MenuDiv><Menu src={menu} alt="Menu Icon" onClick={toggle} /></MenuDiv>}
-                {active == false && <MenuDiv><Menu src={x} alt="X Icon" onClick={toggle} /></MenuDiv>}
+                <MenuDiv><Menu src={activeIcon} alt="Menu Icon" onClick={toggleIcon} /></MenuDiv>
             </Container>
-            {active == false && <Overlay>
-                <a href="/#innovate"><IconParMob onClick={toggle}><Icon src={innovate} alt="Innovate Icon" /><IconType>Innovate</IconType></IconParMob></a>
-                <a href="/#explore"><IconParMob onClick={toggle}><Icon src={explore} alt="Explore Icon" /><IconType>Explore</IconType></IconParMob></a>
-                <a href="/#future"><IconParMob onClick={toggle}><Icon src={future} alt="Future Icon" /><IconType>Future</IconType></IconParMob></a>
-                <a href="/#about"><IconParMob onClick={toggle}><Icon src={about} alt="About Icon" /><IconType>About</IconType></IconParMob></a>
-            </Overlay>}
+            <Overlay active={active}>
+                <a href="/#innovate"><IconParMob onClick={toggleIcon}><Icon src={innovate} alt="Innovate Icon" /><IconType>Innovate</IconType></IconParMob></a>
+                <a href="/#explore"><IconParMob onClick={toggleIcon}><Icon src={explore} alt="Explore Icon" /><IconType>Explore</IconType></IconParMob></a>
+                <a href="/#future"><IconParMob onClick={toggleIcon}><Icon src={future} alt="Future Icon" /><IconType>Future</IconType></IconParMob></a>
+                <a href="/#about"><IconParMob onClick={toggleIcon}><Icon src={about} alt="About Icon" /><IconType>About</IconType></IconParMob></a>
+            </Overlay>
         </div>
     )
 }
