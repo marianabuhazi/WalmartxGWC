@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Gif= styled.img`
     margin:2vh;
-    height:50vh;
+    height:25rem;
     margin-left:0;
     padding-top:2vh;
     @media only screen and (max-width: 768px){
@@ -31,7 +31,7 @@ const Header= styled.div`
 const Reinvent= styled.h1`
     font-family: 'PT Sans';
     color:white;
-    font-size:12vh;
+    font-size:5rem;
     text-align:left;
     @media only screen and (max-width: 768px){
         font-size:9vh;
@@ -40,7 +40,7 @@ const Reinvent= styled.h1`
         font-size:7.5vh;
     }
     @media only screen and (max-width: 425px){
-        font-size:11vw;
+        font-size:10vw;
         padding-left:6vw;
         padding-right:6vw;
     }

@@ -34,6 +34,9 @@ const Par=styled.h5`
     font-size:4vh;
     padding-top:0;
     margin-top:0;
+    @media only screen and (max-width:425px){
+        font-size:6.5vw;
+    }
 `
 const Section=styled.div`
     display: flex;
@@ -60,10 +63,6 @@ const Less = () => {
                 </Container>
             </LessContainer>
             <Par>Only on the Walmart <Link href="https://www.walmart.com/cp/walmart-mobile-app/1087865sourceid=dsn_othr_eabf4283-c1f2-4a30-8fdf-237d0cd82b84&veh=dsn&wmlspartner=dsn_othr_eabf4283-c1f2-4a30-8fdf-237d0cd82b84&cn=FY21-Back-to-School_br_hw_dsn_dis_othr_snl_oth?&adid=22222222254421113918&wmlspartner=wmtlabs&wl0=b&wl1=g&wl2=c&wl3=311994872549&wl4=dsa-569222926777&wl5=9012403&wl6=&wl7=&wl8=&veh=sem&gclid=Cj0KCQjw9O6HBhCrARIsADx5qCS1ejPZC82i-ntmVhXl1YAovbN7Vhv8hTTMv7VAs-zfa58m_HJ6cR0aArPdEALw_wcB&gclsrc=aw.ds">App.</Link></Par>
-            {/* <Background id="innovate">
-                <Title>Innovate</Title>
-                <Title> Innovate Innovate Innovate Innovate</Title>
-            </Background> */}
         </Section>
     )
 }

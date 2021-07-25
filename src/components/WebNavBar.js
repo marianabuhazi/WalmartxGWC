@@ -64,7 +64,7 @@ const IconPar = styled.div`
 const IconType = styled.span`
     padding-top:5px;
     color:white;
-    font-size:2vh;
+    font-size:0.9rem;
     text-decoration:none;
     font-family: 'Otomanopee One', sans-serif;
     &:hover{
