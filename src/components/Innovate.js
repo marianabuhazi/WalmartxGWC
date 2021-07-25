@@ -65,15 +65,14 @@ const Caption=styled.h3`
     text-align: center;
 `
 
-const Innovate = ({image, id, name, color, caption}) => {
+const Innovate = ({image, id, name, color, caption, text, subText}) => {
     return (
         <Divider id={id}>
             <Title>{name}</Title>
             <Container>
                 <Pars>
-                    <Par>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui vivamus arcu. Accumsan sit amet nulla facilisi. Pharetra convallis posuere morbi leo urna molestie at elementum eu. Facilisis sed odio morbi quis commodo. Nec ultrices dui sapien eget mi proin. Integer quis auctor elit sed vulputate mi. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Vitae aliquet nec ullamcorper sit. Ante in nibh mauris cursus mattis molestie a. Quis auctor elit sed vulputate. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Nam at lectus urna duis convallis convallis tellus id. Nunc vel risus commodo viverra maecenas. Ac turpis egestas integer eget aliquet nibh praesent.</Par>
-
-                    <Par>Consectetur adipiscing elit ut aliquam purus. Ac odio tempor orci dapibus ultrices. Gravida quis blandit turpis cursus in hac habitasse platea dictumst. Et magnis dis parturient montes nascetur ridiculus mus mauris. Vel turpis nunc eget lorem dolor sed viverra. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Mi sit amet mauris commodo. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Et magnis dis parturient montes nascetur ridiculus mus. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Augue mauris augue neque gravida in. Turpis nunc eget lorem dolor. Egestas integer eget aliquet nibh. Nulla pharetra diam sit amet. Tempor orci dapibus ultrices in iaculis nunc. Donec massa sapien faucibus et molestie ac feugiat.</Par>
+                    <Par>{text}</Par>
+                    <Par>{subText}</Par>
                 </Pars>
                 <ImgDiv color={color}><Image src={image}/><Caption>{caption}</Caption></ImgDiv>
                 
