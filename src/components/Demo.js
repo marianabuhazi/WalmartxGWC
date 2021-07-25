@@ -21,6 +21,10 @@ const Title= styled.h2`
     text-align:left;
     margin-top:2vh;
     margin-bottom:0;
+    padding-bottom:2vh;
+    @media screen and (max-width:425px){
+        font-size:2.5vh;
+    }
 `
 const Link= styled.a`
     color:#0072CE;
@@ -28,10 +32,10 @@ const Link= styled.a`
 
 const Demo = () => {
     return (
-        <div id="demo" style={{paddingLeft:"5px", paddingBottom:"15vh", borderBottom:"solid #FFB81C 5vh"}}>
+        <div id="demo" style={{paddingLeft:"5px", paddingBottom:"15vh", borderBottom:"solid #FFB81C 5vh", paddingRight:"0", marginRight:"0"}}>
             <Header>Demo</Header>
             <Title>If this video does not load, try this <Link href="https://vimeo.com/578928599">link</Link></Title>
-            <Iframe src="https://player.vimeo.com/video/578928599?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="320" height="200" frameborder="0" margin-left="45%" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Walmart Rooms Mockup"></Iframe>
+            <Iframe src="https://player.vimeo.com/video/578928599?title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="300" height="187.5" frameborder="0" margin-left="45%" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Walmart Rooms Mockup"></Iframe>
         </div>
     )
 }

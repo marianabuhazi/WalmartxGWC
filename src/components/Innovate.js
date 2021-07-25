@@ -24,11 +24,18 @@ const Par= styled.p`
     color:black;
     font-size:3vh;
     padding:1vw 3vw 1vw 3vw;
+    @media only screen and (max-width: 768px){
+        font-size:2.5vh;
+    }
 `
 const Pars= styled.div`
     width:80%;
+    padding-right:1vw;
+    padding-left:1vw;
     @media only screen and (max-width: 768px){
-        width:100%;
+        width:87%;
+        padding-top:2.5vh;
+        padding-bottom:2.5vh;
     }
 `
 
@@ -36,7 +43,7 @@ const Container= styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-around;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 1024px){
         flex-direction: column-reverse;
         align-items:center;
     }
@@ -44,6 +51,9 @@ const Container= styled.div`
 const Image= styled.img`
     height:50vh;
     padding-top:4vh;
+    @media only screen and (max-width: 768px){
+        height:45vh;
+    }
 `
 const ImgDiv= styled.div`
     display:flex;

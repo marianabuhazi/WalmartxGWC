@@ -9,6 +9,12 @@ const Gif= styled.img`
     @media only screen and (max-width: 768px){
         height:45vh;
     }
+    @media only screen and (max-width: 600px){
+        height:40vh;
+    }
+    @media only screen and (max-width: 400px){
+        height:38vh;
+    }
 `
 const Header= styled.div`
     display:flex;
@@ -20,6 +26,7 @@ const Header= styled.div`
     padding-bottom:6vh;
     padding-top:18vh;
     border-bottom: solid #FFB81C 5vh;
+    
 `
 const Reinvent= styled.h1`
     font-family: 'PT Sans';
@@ -28,6 +35,14 @@ const Reinvent= styled.h1`
     text-align:left;
     @media only screen and (max-width: 768px){
         font-size:9vh;
+    }
+    @media only screen and (max-width: 600px){
+        font-size:7.5vh;
+    }
+    @media only screen and (max-width: 425px){
+        font-size:11vw;
+        padding-left:6vw;
+        padding-right:6vw;
     }
     
 `

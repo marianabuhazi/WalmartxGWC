@@ -53,7 +53,7 @@ const IconPar = styled.div`
     justify-content: center;
     padding-right:1vw;
     margin-left:3vw;
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 769px){
         display:none;
     }
     &:hover{
@@ -70,12 +70,16 @@ const IconType = styled.span`
     &:hover{
         color:#FFB81C;
     }
+    @media only screen and (max-width: 425px){
+        font-size:3.3vw;
+
+    }
 
 `
 const Menu = styled.img`
     width:6vh;
 
-    @media only screen and (min-width: 768px){
+    @media only screen and (min-width: 769px){
         display:none;
     }
     &:hover{
@@ -87,8 +91,14 @@ const MenuDiv = styled.div`
     align-items: center;
     width:10%;
     padding-right:2vw;
-    @media only screen and (min-width: 768px){
+    @media only screen and (min-width: 769px){
         display:none;
+    }
+    @media only screen and (max-width: 600px){
+        margin-right:5vw;
+    }
+    @media only screen and (max-width: 400px){
+        margin-right:7vw;
     }
 `
 const swipeIn=keyframes`
@@ -114,7 +124,7 @@ const Overlay = styled.div`
     z-index: 2;
     animation-name:${swipeIn};
     animation-duration: 1s; 
-    @media only screen and (min-width: 768px){
+    @media only screen and (min-width: 766px){
         display:none;
     }
 
